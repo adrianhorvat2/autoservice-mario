@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b0c10;
+    --foreground: #f4f4f5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0b0c10;
+    color: #f4f4f5;
+    font-family: var(--font-barlow), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-barlow-condensed), system-ui, sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  /* Točno poravnanje sekcija ispod sticky zaglavlja */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 114px;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Diskretan industrijski scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c10;
+}
+::-webkit-scrollbar-thumb {
+  background: #232530;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
 }

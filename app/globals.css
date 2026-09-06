@@ -15,7 +15,7 @@
     background-color: #0b0c10;
     color: #f4f4f5;
     font-family: var(--font-barlow), system-ui, sans-serif;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, .font-heading {

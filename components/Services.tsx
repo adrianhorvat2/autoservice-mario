@@ -5,7 +5,6 @@ import {
   Disc3, 
   Laptop, 
   ShieldAlert,
-  Phone,
   Check
 } from "lucide-react";
 
@@ -151,20 +150,11 @@ export default function Services() {
         </div>
 
         {/* Donja informativna traka */}
-        <div className="mt-12 p-6 rounded-xl bg-[#13141c] border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
-            <h4 className="text-base font-bold uppercase tracking-wide text-white">Niste sigurni u čemu je problem na vozilu?</h4>
-            <p className="text-xs text-zinc-400 mt-1">
-              Slobodno nas nazovite i opišite simptome. Pomoći ćemo vam s dijagnozom i zakazati pregled.
-            </p>
-          </div>
-          <a
-            href="tel:+385994324392"
-            className="shrink-0 px-6 py-3 rounded bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-colors inline-flex items-center gap-2"
-          >
-            <Phone className="w-4 h-4" />
-            <span>099 432 43 92</span>
-          </a>
+        <div className="mt-10 p-6 rounded-xl bg-[#13141c] border border-zinc-800 text-center sm:text-left">
+          <h4 className="text-base font-bold uppercase tracking-wide text-white">Niste sigurni u čemu je problem na vozilu?</h4>
+          <p className="text-xs sm:text-sm text-zinc-400 mt-1">
+              Slobodno nazovite i opišite simptome. Pomoći ćemo vam s dijagnozom i zakazati pregled.
+          </p>
         </div>
 
       </div>

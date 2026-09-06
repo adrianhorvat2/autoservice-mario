@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://autoservice-mario.hr"),
   title: "AutoService Mario d.o.o. — Automehaničarski servis Vinkovci",
   description:
-    "AutoService Mario d.o.o. u Vinkovcima. Brzi servis, automehanika, autoelektrika, vulkanizacija, kompjuterska dijagnostika i kočioni sustavi. Radno vrijeme po dogovoru. Nazovite 099 432 43 92.",
+    "AutoService Mario d.o.o. u Vinkovcima. Brzi servis, automehanika, autoelektrika, vulkanizacija, kompjuterska dijagnostika i kočioni sustavi. Radno vrijeme po dogovoru. Nazovite +385 99 432 4392.",
   keywords: [
     "autoservis Vinkovci",
     "automehaničar Vinkovci",

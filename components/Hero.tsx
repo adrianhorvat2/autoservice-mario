@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Phone, ArrowDown, Clock, MapPin, Wrench } from "lucide-react";
 
 export default function Hero() {
+  const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.querySelector("#usluge")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="bg-[#0b0c10] text-white pt-12 pb-14 md:pt-20 md:pb-20 border-b border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,9 +18,8 @@ export default function Hero() {
           {/* Lijeva strana: Naslov, opis i primarne akcije */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#16171f] border border-zinc-800 text-xs font-semibold uppercase tracking-widest text-zinc-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              <span>Automehaničarski servis • Vinkovci</span>
+            <div className="inline-flex items-center px-3 py-1 rounded bg-[#16171f] border border-zinc-800 text-xs font-semibold uppercase tracking-widest text-zinc-300">
+              <span>Auto servis • Vinkovci</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-6xl font-extrabold uppercase tracking-tight text-white leading-none">
@@ -31,12 +37,13 @@ export default function Hero() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded bg-red-600 hover:bg-red-700 text-white font-bold text-base uppercase tracking-wider transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>Nazovi: 099 432 43 92</span>
+                <span>Nazovi: +385 99 432 4392</span>
               </a>
 
               <a
                 href="#usluge"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded bg-[#16171f] hover:bg-[#1e1f2b] text-zinc-200 border border-zinc-700 font-bold text-base uppercase tracking-wider transition-colors"
+                onClick={scrollToServices}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded bg-[#16171f] hover:bg-[#1e1f2b] text-zinc-200 border border-zinc-700 font-bold text-base uppercase tracking-wider transition-colors cursor-pointer"
               >
                 <span>Pregledaj usluge</span>
                 <ArrowDown className="w-4 h-4 text-zinc-400" />

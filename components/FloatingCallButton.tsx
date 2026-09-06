@@ -8,7 +8,7 @@ export default function FloatingCallButton() {
       <a
         href="tel:+385994324392"
         className="w-14 h-14 rounded-full bg-red-600 hover:bg-red-700 active:scale-95 text-white shadow-xl shadow-black/60 flex items-center justify-center transition-transform"
-        aria-label="Nazovite AutoService Mario: 099 432 43 92"
+        aria-label="Nazovite AutoService Mario: +385 99 432 4392"
       >
         <Phone className="w-6 h-6" />
       </a>

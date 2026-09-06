@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, ArrowUp } from "lucide-react";
 
 export default function Footer() {
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    if (targetId === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      document.querySelector(targetId)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-[#07080a] text-zinc-400 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
@@ -42,19 +53,19 @@ export default function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-white">Navigacija</h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="#" className="hover:text-red-400 transition-colors">Početna</a>
+                <a href="#" onClick={(e) => handleScrollTo(e, "#")} className="hover:text-red-400 transition-colors cursor-pointer">Početna</a>
               </li>
               <li>
-                <a href="#usluge" className="hover:text-red-400 transition-colors">Usluge servisa</a>
+                <a href="#usluge" onClick={(e) => handleScrollTo(e, "#usluge")} className="hover:text-red-400 transition-colors cursor-pointer">Usluge servisa</a>
               </li>
               <li>
-                <a href="#zasto-mi" className="hover:text-red-400 transition-colors">Zašto mi</a>
+                <a href="#zasto-mi" onClick={(e) => handleScrollTo(e, "#zasto-mi")} className="hover:text-red-400 transition-colors cursor-pointer">Zašto mi</a>
               </li>
               <li>
-                <a href="#o-nama" className="hover:text-red-400 transition-colors">O nama</a>
+                <a href="#o-nama" onClick={(e) => handleScrollTo(e, "#o-nama")} className="hover:text-red-400 transition-colors cursor-pointer">O nama</a>
               </li>
               <li>
-                <a href="#kontakt" className="hover:text-red-400 transition-colors">Kontakt i lokacija</a>
+                <a href="#kontakt" onClick={(e) => handleScrollTo(e, "#kontakt")} className="hover:text-red-400 transition-colors cursor-pointer">Kontakt i lokacija</a>
               </li>
             </ul>
           </div>
@@ -79,7 +90,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-red-500 shrink-0" />
                 <a href="tel:+385994324392" className="text-white hover:text-red-400 font-bold transition-colors">
-                  099 432 43 92
+                  +385 99 432 4392
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -109,7 +120,8 @@ export default function Footer() {
           <p>© 2026 AutoService Mario d.o.o. Sva prava pridržana.</p>
           <a
             href="#"
-            className="inline-flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
+            onClick={(e) => handleScrollTo(e, "#")}
+            className="inline-flex items-center gap-1.5 hover:text-zinc-300 transition-colors cursor-pointer"
           >
             <span>Povratak na vrh</span>
             <ArrowUp className="w-3.5 h-3.5" />

@@ -33,8 +33,8 @@ export default function Contact() {
                   <span className="text-xs uppercase tracking-wider text-zinc-400 font-bold block">
                     Telefon
                   </span>
-                  <span className="text-xl sm:text-2xl font-bold font-mono text-white block mt-0.5">
-                    099 432 43 92
+                  <span className="text-xl sm:text-2xl font-bold text-white block mt-0.5">
+                    +385 99 432 4392
                   </span>
                   <span className="text-xs text-zinc-400 block mt-1">
                     Dostupni za pozive i dogovor termina
@@ -88,7 +88,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-red-400 hover:text-red-300 mt-2"
                   >
-                    <span>Upute za vožnju (Google Maps)</span>
+                    <span>Google Maps</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
